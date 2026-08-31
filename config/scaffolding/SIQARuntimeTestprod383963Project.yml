@@ -66,6 +66,28 @@ services:
     version: 12.0.0.0.23
   - name: SIQACloudStreamsTests
     version: "1.0"
+- serviceName: project.siqaruntimetestprod383963.integrations:OracleTPP
+  packages:
+  - name: SIQARuntimeTestprod383963Project
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 12.0.0.0.23
+  - name: SIQACloudStreamsTests
+    version: "1.0"
+- serviceName: SIQAJDBCAdapterTests.adapterServices:getData
+  packages:
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 configurationVariables:
   ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionManagerSettings.poolable
   : "false"
