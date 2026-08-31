@@ -13,7 +13,7 @@
   <COMMENT></COMMENT>
 </INVOKE>
 
-<INVOKE NAME="SSL_JDBC_Test" SERVICE="SSL_JDBC_Test.services:insert_ssl">
+<INVOKE NAME="SSL_JDBC_Test" SERVICE="SSL_JDBC_Test.services:insert_ssl" DISABLED="true">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
