@@ -20,10 +20,39 @@ packages:
   gitUsername: manoj-jannu-IBM
   gitBranch: main
 - name: WmJDBCAdapter
+  version: 10.3.0.0.34
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
 services:
 - serviceName: project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_OracleNonSSL
+  packages:
+  - name: SIQARuntimeTestprod383963Project
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 12.0.0.0.23
+  - name: SIQACloudStreamsTests
+    version: "1.0"
+- serviceName: project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:getData
+  packages:
+  - name: SIQARuntimeTestprod383963Project
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 12.0.0.0.23
+  - name: SIQACloudStreamsTests
+    version: "1.0"
+- serviceName: project.siqaruntimetestprod383963.integrations:OracleDBTest
   packages:
   - name: SIQARuntimeTestprod383963Project
     version: "1.0"
@@ -77,7 +106,7 @@ configurationVariables:
   ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionManagerSettings.poolIncrementSize
   : "1"
   ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionEnabled
-  : "false"
+  : "true"
   ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.driverType
   : Progress® DataDirect®
   ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.serverName
