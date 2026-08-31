@@ -32,6 +32,11 @@ packages:
   gitUrl: https://github.com/prabhakarsag
   gitUsername: manoj-jannu-IBM
   gitBranch: main
+- name: JMSTest
+  gitServerName: SIQAGitHubTest
+  gitUrl: https://github.com/prabhakarsag
+  gitUsername: manoj-jannu-IBM
+  gitBranch: main
 services:
 - serviceName: project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_OracleNonSSL
   packages:
@@ -142,10 +147,10 @@ services:
 configurationVariables:
   ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.driverType
   : Progress® DataDirect®
-  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionManagerSettings.poolable
-  : "false"
   ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.dbType
   : ORACLE
+  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionManagerSettings.poolable
+  : "false"
   ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.datasourceClass
   : com.wm.dd.jdbcx.oracle.OracleDataSource
   ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionManagerSettings.heartBeatInterval
