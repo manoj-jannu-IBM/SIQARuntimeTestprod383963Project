@@ -23,6 +23,9 @@ packages:
   version: 10.3.0.0.34
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
+- name: WmSalesforceProvider
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: supported
 services:
 - serviceName: project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_OracleNonSSL
   packages:
