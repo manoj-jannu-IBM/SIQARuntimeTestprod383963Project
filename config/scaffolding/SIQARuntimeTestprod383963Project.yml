@@ -28,34 +28,26 @@ packages:
   wpmServer: https://packages.webmethods.io
   wpmRegistry: supported
 - name: JMS2waySSL
+  version: "1.0"
   gitServerName: SIQAGitHubTest
   gitUrl: https://github.com/prabhakarsag
   gitUsername: manoj-jannu-IBM
   gitBranch: main
 - name: JMSTest
+  version: "1.0"
   gitServerName: SIQAGitHubTest
   gitUrl: https://github.com/prabhakarsag
   gitUsername: manoj-jannu-IBM
   gitBranch: main
 services:
-- serviceName: project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_OracleNonSSL
-  packages:
-  - name: SIQARuntimeTestprod383963Project
-    version: "1.0"
-  - name: SIQAJDBCAdapterTests
-    version: "1.0"
-  - name: WmJDBCAdapter
-    version: 10.3.0.0.34
-    wpmServer: https://packages.webmethods.io
-    wpmRegistry: licensed
-  - name: WmSalesforceProvider
-    version: 12.0.0.0.23
-  - name: SIQACloudStreamsTests
-    version: "1.0"
 - serviceName: project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:getData
   packages:
   - name: SIQARuntimeTestprod383963Project
     version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: JMSTest
+    version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
   - name: WmJDBCAdapter
@@ -66,9 +58,13 @@ services:
     version: 12.0.0.0.23
   - name: SIQACloudStreamsTests
     version: "1.0"
-- serviceName: project.siqaruntimetestprod383963.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.connections:SalesforceOauth
+- serviceName: project.siqaruntimetestprod383963.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.operations.actions:createSFAccount
   packages:
   - name: SIQARuntimeTestprod383963Project
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: JMSTest
     version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
@@ -84,6 +80,10 @@ services:
   packages:
   - name: SIQARuntimeTestprod383963Project
     version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: JMSTest
+    version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
   - name: WmJDBCAdapter
@@ -97,6 +97,10 @@ services:
 - serviceName: project.siqaruntimetestprod383963.integrations:OracleTPP
   packages:
   - name: SIQARuntimeTestprod383963Project
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: JMSTest
     version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
@@ -120,6 +124,10 @@ services:
   packages:
   - name: SIQARuntimeTestprod383963Project
     version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: JMSTest
+    version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
   - name: WmJDBCAdapter
@@ -130,9 +138,43 @@ services:
     version: 12.0.0.0.23
   - name: SIQACloudStreamsTests
     version: "1.0"
-- serviceName: project.siqaruntimetestprod383963.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.operations.actions:createSFAccount
+- serviceName: project.siqaruntimetestprod383963.integrations:testjms
   packages:
   - name: SIQARuntimeTestprod383963Project
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: JMSTest
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 12.0.0.0.23
+  - name: SIQACloudStreamsTests
+    version: "1.0"
+- serviceName: publisher:publisher
+  packages:
+  - name: JMSTest
+    version: "1.0"
+- serviceName: pub.jms:send
+  packages:
+  - name: WmPublic
+    version: 12.1.0.0.1032
+- serviceName: jms2wayssl_publisher:jms2wayssl_publisher
+  packages:
+  - name: JMS2waySSL
+    version: "1.0"
+- serviceName: SSL_JDBC_Test.services:insert_ssl
+  packages:
+  - name: SIQARuntimeTestprod383963Project
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: JMSTest
     version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
@@ -145,49 +187,49 @@ services:
   - name: SIQACloudStreamsTests
     version: "1.0"
 configurationVariables:
-  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.driverType
-  : Progress® DataDirect®
-  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.dbType
-  : ORACLE
   ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionManagerSettings.poolable
   : "false"
-  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.datasourceClass
-  : com.wm.dd.jdbcx.oracle.OracleDataSource
-  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionManagerSettings.heartBeatInterval
-  : "0"
   ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.user
   : SIQA_BVT01
-  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.databaseName
-  : ORCL
   ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.otherProperties
   : loginTimeout=60;driverType=thin;
   ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.keyStore
   : ""
+  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.datasourceClass
+  : com.wm.dd.jdbcx.oracle.OracleDataSource
+  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionManagerSettings.heartBeatInterval
+  : "0"
   ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.trustStore
   : ""
   ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.portNumber
   : "1521"
+  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.transactionType
+  : NO_TRANSACTION
+  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionManagerSettings.startupRetryCount
+  : "0"
+  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.password
+  : "{AES}4eigcgUNJNC1z2PQaWS0XA=="
+  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionManagerSettings.maximumPoolSize
+  : "10"
+  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.networkProtocol
+  : tcp
+  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.dbType
+  : ORACLE
+  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.databaseName
+  : ORCL
   ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionManagerSettings.startupBackoffSecs
   : "10"
   ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionManagerSettings.expireTimeout
   : "1000"
   ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionManagerSettings.blockingTimeout
   : "1000"
-  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.serverName
-  : adapter-oracle-121-on-amazonrds.cdmjexwbzoym.us-east-1.rds.amazonaws.com
-  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.transactionType
-  : NO_TRANSACTION
-  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionManagerSettings.startupRetryCount
-  : "0"
   ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionManagerSettings.poolIncrementSize
   : "1"
-  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionManagerSettings.minimumPoolSize
-  : "1"
-  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.password
-  : "{AES}4eigcgUNJNC1z2PQaWS0XA=="
-  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionManagerSettings.maximumPoolSize
-  : "10"
   ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionEnabled
   : "true"
-  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.networkProtocol
-  : tcp
+  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.driverType
+  : Progress® DataDirect®
+  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionSettings.serverName
+  : adapter-oracle-121-on-amazonrds.cdmjexwbzoym.us-east-1.rds.amazonaws.com
+  ? artConnection.SIQARuntimeTestprod383963Project.project.siqaruntimetestprod383963.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_OracleNonSSL.connectionManagerSettings.minimumPoolSize
+  : "1"
