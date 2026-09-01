@@ -1,0 +1,8 @@
+#PassManConfigurator changes to use: default
+#Tue Sep 01 08:58:33 GMT 2026
+MasterPasswordClass=com.webmethods.sc.security.passman.impl.masterpw.AesEcbP5MasterPassword
+default.encryptor=AesEcbPkcs5
+master.password.field.fileName=packages/SIQARuntimeTestprod383963Project/config/ae256mpwd.dat
+master.password.field.repeatLimit=4
+outbound.password.store.field.fileName=packages/SIQARuntimeTestprod383963Project/config/txnPassStore.dat
+sanity.encryptor=AesEcbPkcs5
