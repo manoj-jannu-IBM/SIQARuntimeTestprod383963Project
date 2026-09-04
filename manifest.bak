@@ -9,18 +9,25 @@
   <null name="startup_services"/>
   <null name="shutdown_services"/>
   <null name="replication_services"/>
-  <null name="requires"/>
+  <record name="requires" javaclass="com.wm.util.Values">
+    <value name="SIQAJDBCAdapterTests">1.0</value>
+    <value name="SIQACloudStreamsTests">1.0</value>
+    <value name="WmJDBCAdapter">10.3.0.0.34</value>
+    <value name="WmSalesforceProvider">12.0.0.0.23</value>
+    <value name="JMS2waySSL">1.0</value>
+    <value name="JMSTest">1.0</value>
+  </record>
   <null name="lazy_load_node_types"/>
   <null name="listACL"/>
   <value name="webappLoad">yes</value>
   <value name="reloadWithDependentPackage">yes</value>
-  <value name="build">1</value>
+  <value name="build">30</value>
   <null name="description"/>
   <value name="created_date">31-08-2026 09:02:58 GMT</value>
   <null name="extendedProperties"/>
   <value name="target_server_version">12.1.0.0</value>
   <value name="isProjectPackage">true</value>
-  <value name="lastUpdated">2026-08-31T09:03:00.29080088Z</value>
+  <value name="lastUpdated">2026-09-04T09:43:11.624447138Z</value>
   <value name="wmProjectId">fl542c6ef48c6f4f11b9ae89e7072bf01b</value>
   <value name="creator">gen-SIQA-Test gen-SIQA-Test</value>
 </Values>
